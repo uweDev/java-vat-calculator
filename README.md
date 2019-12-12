@@ -1,7 +1,6 @@
 # Java vat calculator
 
-EN: With this VAT calculator you can calculate the gross and net amount of an invoice. 
-DE: Mit diesem Mehrwertsteuerrechner können Sie den Brutto- und Nettobetrag einer Rechnung berechnen.
+With this VAT calculator you can calculate the gross and net amount of an invoice. 
 
 ### Requirements:
 * Java version 8 or higher.
