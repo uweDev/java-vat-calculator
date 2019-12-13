@@ -18,7 +18,7 @@ public class mehrwertsteuerApp {
 		vatDouble			= Integer.parseInt(JOptionPane.showInputDialog("Mehrwertsteuersatz eingeben: "));
 		amountString		= JOptionPane.showInputDialog("Nettorechnungsbetrag eingeben: ");
 
-		// Replaces comma with period
+		// Replaces comma with period and change the data type
 		amountString		= amountString.replace(',', '.');
 		amountDouble		= Double.valueOf(amountString);
 		
@@ -26,7 +26,7 @@ public class mehrwertsteuerApp {
 		vatDoubleCalculates	= vatDouble * amountDouble / 100;
 		totalDouble			= vatDoubleCalculates + amountDouble;
 		
-		// Replaces period with comma
+		// Change the data types and replaces period with comma
 		totalString			= String.valueOf(totalDouble);
 		amountString		= String.valueOf(amountDouble);
 		amountString		= amountString.replace('.', ',');
