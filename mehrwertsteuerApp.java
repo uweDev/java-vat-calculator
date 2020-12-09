@@ -14,31 +14,32 @@ public class mehrwertsteuerApp {
 		double vatDoubleCalculates, vatDouble, totalDouble, amountDouble;
 
 		// Input windows
-		currencyString		= JOptionPane.showInputDialog("Währung eingeben: ");
-		vatDouble			= Integer.parseInt(JOptionPane.showInputDialog("Mehrwertsteuersatz eingeben: "));
-		amountString		= JOptionPane.showInputDialog("Nettorechnungsbetrag eingeben: ");
+		currencyString	= JOptionPane.showInputDialog("WÃ¤hrung eingeben: ");
+		vatDouble	= Integer.parseInt(JOptionPane.showInputDialog("Mehrwertsteuersatz eingeben: "));
+		amountString	= JOptionPane.showInputDialog("Nettorechnungsbetrag eingeben: ");
 
 		// Replaces comma with period and change the data type
-		amountString		= amountString.replace(',', '.');
-		amountDouble		= Double.valueOf(amountString);
+		amountString	= amountString.replace(',', '.');
+		amountDouble	= Double.valueOf(amountString);
 		
 		// Calculates gross amount
 		vatDoubleCalculates	= vatDouble * amountDouble / 100;
-		totalDouble			= vatDoubleCalculates + amountDouble;
+		totalDouble		= vatDoubleCalculates + amountDouble;
 		
 		// Change the data types and replaces period with comma
-		totalString			= String.valueOf(totalDouble);
-		amountString		= String.valueOf(amountDouble);
-		amountString		= amountString.replace('.', ',');
-		totalString			= totalString.replace('.', ',');
+		totalString	= String.valueOf(totalDouble);
+		amountString	= String.valueOf(amountDouble);
+		amountString	= amountString.replace('.', ',');
+		totalString	= totalString.replace('.', ',');
 		
 		// Results output
 		JOptionPane.showMessageDialog(
-			null, "Ihre Eingaben lauteten: \n\n" + "Währung: " 
+			null, "Ihre Eingaben lauteten: \n\n" + "WÃ¤hrung: " 
 			+ currencyString + "\n" + "Mehrwertsteuersatz: " + vatDouble + "%" 
 			+ "\n" + "Rechnungsbetrag: " + amountString + " " + currencyString + "\n\n" 
 			+ "Ihr Ergebnis lautet: \n\n" + "Nettorechnungsbetrag: " 
 			+  amountString + " " + currencyString + "\n" + "Mehrwertsteuer: " + vatDouble + " " + currencyString + "\n" 
-			+ "Gesamtbetrag (Brutto): " + totalString + " " + currencyString);
+			+ "Gesamtbetrag (Brutto): " + totalString + " " + currencyString
+		);
 	}
 }
